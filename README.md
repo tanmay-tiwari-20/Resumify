@@ -1,87 +1,53 @@
-# Welcome to React Router!
+# Resumify – AI-Powered Resume Review Platform
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Resumify is a web application that allows users to **upload, store, and review resumes** with detailed AI-generated feedback, ATS (Applicant Tracking System) scoring, and structured improvement suggestions.  
+The platform provides an intuitive UI to view a scanned resume preview, analyze its strengths and weaknesses, and get actionable tips to improve it.
 
 ---
 
-Built with ❤️ using React Router.
+## 🚀 Features
+
+- **Secure Resume Upload & Storage** – Store PDF resumes securely in the system.
+- **Image Preview of Resumes** – Display a visual snapshot of the uploaded resume.
+- **ATS Scoring** – Automated scoring to check resume compatibility with Applicant Tracking Systems.
+- **Detailed Feedback** – Get structured improvement tips based on AI analysis.
+- **Summary Section** – Quick overview of key strengths and weaknesses.
+- **Responsive UI** – Works seamlessly on desktop, tablet, and mobile devices.
+- **Authentication System** – Access control so only logged-in users can view their resumes.
+- **Animated UI Elements** – Smooth transitions and animations for better user experience.
+- **Persistent Resume URLs** – Each resume has its own shareable, unique ID-based link.
+
+---
+
+## 🛠 Tech Stack
+
+### **Frontend**
+- **React.js** – UI framework for building interactive components
+- **Tailwind CSS** – Utility-first CSS framework for styling
+- **React Router** – For navigation and URL-based resume viewing
+
+### **Backend / Data**
+- **Puter Store** – Used for authentication, key-value storage (`kv`), and file system (`fs`)
+- **Blob Storage** – Store and retrieve PDF and image versions of resumes
+- **Custom Feedback Data Structure** – Stores ATS score, suggestions, and review details
+
+### **Other Tools**
+- **TypeScript** – For type safety in components
+- **Vite** – Development server and bundler
+- **ESLint & Prettier** – Code formatting and linting
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – feel free to modify and use it in your own projects.
+
+---
+
+## 📧 Contact
+
+For queries, suggestions, or collaborations:
+
+- **Email:** workwithtakneekitanmay@gmail.com
+- **GitHub:** [tanmay-tiwari-20](https://github.com/tanmay-tiwari-20/)
+- **LinkedIn:** [Tanay Tiwari](https://linkedin.com/in/tanmay-tiwari20/)
