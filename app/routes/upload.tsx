@@ -1,11 +1,11 @@
-import { prepareInstructions } from "../../constants";
-import { useState, type FormEvent } from "react";
-import { useNavigate } from "react-router";
-import FileUploader from "~/components/FileUploader";
+import { type FormEvent, useState } from "react";
 import Navbar from "~/components/Navbar";
-import { convertPdfToImage } from "~/lib/pdf2img";
+import FileUploader from "~/components/FileUploader";
 import { usePuterStore } from "~/lib/puter";
+import { useNavigate } from "react-router";
+import { convertPdfToImage } from "~/lib/pdf2img";
 import { generateUUID } from "~/lib/utils";
+import { prepareInstructions } from "../../constants";
 
 const Upload = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
@@ -30,23 +30,21 @@ const Upload = () => {
     file: File;
   }) => {
     setIsProcessing(true);
+
     setStatusText("Uploading the file...");
-
     const uploadedFile = await fs.upload([file]);
-
     if (!uploadedFile) return setStatusText("Error: Failed to upload file");
 
     setStatusText("Converting to image...");
     const imageFile = await convertPdfToImage(file);
     if (!imageFile.file)
-      return setStatusText("Error: Failed to convert PDF to Image");
+      return setStatusText("Error: Failed to convert PDF to image");
 
     setStatusText("Uploading the image...");
     const uploadedImage = await fs.upload([imageFile.file]);
     if (!uploadedImage) return setStatusText("Error: Failed to upload image");
 
     setStatusText("Preparing data...");
-
     const uuid = generateUUID();
     const data = {
       id: uuid,
@@ -57,7 +55,6 @@ const Upload = () => {
       jobDescription,
       feedback: "",
     };
-
     await kv.set(`resume:${uuid}`, JSON.stringify(data));
 
     setStatusText("Analyzing...");
@@ -98,6 +95,7 @@ const Upload = () => {
   return (
     <main className="bg-[url('/images/bg-main.svg')] bg-cover">
       <Navbar />
+
       <section className="main-section">
         <div className="page-heading py-16">
           <h1>Smart feedback for your dream job</h1>
@@ -142,6 +140,7 @@ const Upload = () => {
                   id="job-description"
                 />
               </div>
+
               <div className="form-div">
                 <label htmlFor="uploader">Upload Resume</label>
                 <FileUploader onFileSelect={handleFileSelect} />
@@ -157,5 +156,4 @@ const Upload = () => {
     </main>
   );
 };
-
 export default Upload;
