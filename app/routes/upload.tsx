@@ -8,12 +8,20 @@ import { generateUUID } from "~/lib/utils";
 import { prepareInstructions } from "../../constants";
 
 export const meta = () => [
-  { title: "Resumify | Upload" },
+  { title: "Resumify | Upload & Analyze Your Resume with AI" },
   {
     name: "description",
     content:
-      "Upload your resume with your desired company and job application that you want to apply for",
+      "Upload your resume, specify the job listing, and get a tailored ATS score with AI-powered feedback to improve your chances of landing your dream job.",
   },
+
+  // SEO Keywords
+  {
+    name: "keywords",
+    content:
+      "upload resume, AI resume analysis, ATS score, job matching, resume feedback, resume improvement, resume optimization",
+  },
+  { name: "author", content: "Tanmay Tiwari" },
 ];
 
 const Upload = () => {

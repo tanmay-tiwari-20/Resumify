@@ -6,8 +6,18 @@ import Summary from "~/components/Summary";
 import { usePuterStore } from "~/lib/puter";
 
 export const meta = () => [
-  { title: "Resumify | Review" },
-  { name: "description", content: "Detailed overview of your resume" },
+  { title: "Resumify | Resume Review & ATS Feedback" },
+  {
+    name: "description",
+    content:
+      "Get a detailed review of your resume with ATS score, suggestions, and professional feedback to improve your chances of getting hired.",
+  },
+  {
+    name: "keywords",
+    content:
+      "resume review, ATS score, resume feedback, job application, resume analysis, resumify",
+  },
+  { name: "author", content: "Tanmay Tiwari" },
 ];
 
 const Resume = () => {

@@ -3,9 +3,22 @@ import { useLocation, useNavigate } from "react-router";
 import { usePuterStore } from "~/lib/puter";
 
 export const meta = () => [
-  { title: "Resumify | Auth" },
-  { name: "description", content: "Log into your account." },
+  { title: "Resumify | Secure Login & Authentication" },
+  {
+    name: "description",
+    content:
+      "Log in securely to Resumify to access your AI-powered resume analysis, ATS scores, and job matching tools."
+  },
+  
+  // SEO Keywords
+  {
+    name: "keywords",
+    content:
+      "Resumify login, AI resume analyzer login, secure authentication, resume ATS score, job matcher, Puter.js auth"
+  },
+  { name: "author", content: "Tanmay Tiwari" },
 ];
+
 
 const Auth = () => {
   const { isLoading, auth } = usePuterStore();
