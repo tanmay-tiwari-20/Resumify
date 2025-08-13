@@ -50,4 +50,5 @@ For queries, suggestions, or collaborations:
 
 - **Email:** workwithtakneekitanmay@gmail.com
 - **GitHub:** [tanmay-tiwari-20](https://github.com/tanmay-tiwari-20/)
-- **LinkedIn:** [Tanay Tiwari](https://linkedin.com/in/tanmay-tiwari20/)
+- **LinkedIn:** [Tanmay Tiwari](https://linkedin.com/in/tanmay-tiwari20/)
+- **Instagram:** [Tanmay Tiwari](https://www.instagram.com/takneekitanmay/)
