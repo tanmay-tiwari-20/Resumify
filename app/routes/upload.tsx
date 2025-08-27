@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 import { convertPdfToImage } from "~/lib/pdf2img";
 import { generateUUID } from "~/lib/utils";
 import { prepareInstructions } from "../../constants";
+import SplitText from "~/components/SplitText";
 
 export const meta = () => [
   { title: "Resumify | Upload & Analyze Your Resume with AI" },
@@ -115,7 +116,19 @@ const Upload = () => {
 
       <section className="main-section">
         <div className="page-heading py-16">
-          <h1>Smart Insights to Boost Your Career Goals</h1>
+          <SplitText
+            text="Smart Insights to Boost Your Career Goals"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center flex flex-col items-center gap-6 sm:gap-8 max-w-4xl px-4 break-keep whitespace-normal"
+            delay={150}
+            duration={0.6}
+            ease="power3.out"
+            splitType="words"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           {isProcessing ? (
             <>
               <h2>{statusText}</h2>
