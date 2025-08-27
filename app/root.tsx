@@ -12,6 +12,34 @@ import "./app.css";
 import { usePuterStore } from "./lib/puter";
 import { useEffect } from "react";
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Resumify | AI-Powered Resume Analyzer & Job Matcher" },
+    {
+      name: "description",
+      content:
+        "Analyze, store, and match your resumes to job listings with AI. Get custom ATS scores, smart feedback, and track applications seamlessly—all in a modern UI.",
+    },
+
+    {
+      name: "keywords",
+      content:
+        "resume analyzer, AI resume feedback, ATS score, job matcher, resume storage, Puter.js, React, Tailwind CSS, resume tracking",
+    },
+    { name: "author", content: "Tanmay Tiwari" },
+
+    // Open Graph metadata for better link previews
+    { property: "og:title", content: "Resumify – AI Resume Analyzer" },
+    {
+      property: "og:description",
+      content:
+        "Upload resumes, match with jobs, and get ATS-optimized feedback using AI. Built with React, Puter.js, and Tailwind CSS.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://resumify-silk.vercel.app/" },
+  ];
+}
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -26,11 +54,11 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { init } = usePuterStore()
+  const { init } = usePuterStore();
 
   useEffect(() => {
-    init()
-  }, [init])
+    init();
+  }, [init]);
   return (
     <html lang="en">
       <head>

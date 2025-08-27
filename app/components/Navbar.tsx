@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import PillNav from "./PillNav";
-import logo from '../../public/R.png'
+import logo from '/R.png'
 
 const Navbar = () => {
   return (
